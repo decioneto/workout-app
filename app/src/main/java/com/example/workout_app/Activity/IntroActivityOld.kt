@@ -1,16 +1,12 @@
-package com.example.workout_app
+package com.example.workout_app.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.workout_app.databinding.ActivityIntroBinding
 
-class IntroActivity : AppCompatActivity() {
+class IntroActivityOld : AppCompatActivity() {
     private lateinit var binding: ActivityIntroBinding;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +17,7 @@ class IntroActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         binding.startButton.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, MainActivityOld::class.java))
         }
     }
 }
